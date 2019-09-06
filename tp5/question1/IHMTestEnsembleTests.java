@@ -35,19 +35,19 @@ public class IHMTestEnsembleTests extends junit.framework.TestCase{
     public void test_IHMTestEnsemble_union() throws Exception{
         Container panel = f.getContentPane();
         Component[] components = panel.getComponents();
-        assertEquals(" IHM a-t-elle Ã©tÃ© modifiÃ©e ?", components.length, 4);
+        assertEquals(" IHM a-t-elle été modifiée ?", components.length, 4);
 
         // la bonne IHM
-        assertTrue(" IHM a-t-elle Ã©tÃ© modifiÃ©e ?", components[0] instanceof JPanel);
-        assertTrue(" IHM a-t-elle Ã©tÃ© modifiÃ©e ?", components[1] instanceof JPanel);
-        assertTrue(" IHM a-t-elle Ã©tÃ© modifiÃ©e ?", components[2] instanceof JPanel);
-        assertTrue(" IHM a-t-elle Ã©tÃ© modifiÃ©e ?", components[3] instanceof JPanel);
+        assertTrue(" IHM a-t-elle été modifiée ?", components[0] instanceof JPanel);
+        assertTrue(" IHM a-t-elle été modifiée ?", components[1] instanceof JPanel);
+        assertTrue(" IHM a-t-elle été modifiée ?", components[2] instanceof JPanel);
+        assertTrue(" IHM a-t-elle été modifiée ?", components[3] instanceof JPanel);
 
         Component[] subComponents = ((JPanel)components[2]).getComponents();
-        assertTrue(" IHM a-t-elle Ã©tÃ© modifiÃ©e ?", subComponents[1] instanceof JButton);// union
-        assertTrue(" IHM a-t-elle Ã©tÃ© modifiÃ©e ?", subComponents[2] instanceof JButton);// inter
-        assertTrue(" IHM a-t-elle Ã©tÃ© modifiÃ©e ?", subComponents[3] instanceof JButton);// diff
-        assertTrue(" IHM a-t-elle Ã©tÃ© modifiÃ©e ?", subComponents[4] instanceof JButton);// diffSym
+        assertTrue(" IHM a-t-elle été modifiée ?", subComponents[1] instanceof JButton);// union
+        assertTrue(" IHM a-t-elle été modifiée ?", subComponents[2] instanceof JButton);// inter
+        assertTrue(" IHM a-t-elle été modifiée ?", subComponents[3] instanceof JButton);// diff
+        assertTrue(" IHM a-t-elle été modifiée ?", subComponents[4] instanceof JButton);// diffSym
 
         final String e1 = "2 3 4 5";
         final String e2 = "4 5 6 7";
@@ -61,19 +61,19 @@ public class IHMTestEnsembleTests extends junit.framework.TestCase{
     public void test_IHMTestEnsemble_inter() throws Exception{
         Container panel = f.getContentPane();
         Component[] components = panel.getComponents();
-        assertEquals(" IHM a-t-elle Ã©tÃ© modifiÃ©e ?", components.length, 4);
+        assertEquals(" IHM a-t-elle été modifiée ?", components.length, 4);
 
         // la bonne IHM
-        assertTrue(" IHM a-t-elle Ã©tÃ© modifiÃ©e ?", components[0] instanceof JPanel);
-        assertTrue(" IHM a-t-elle Ã©tÃ© modifiÃ©e ?", components[1] instanceof JPanel);
-        assertTrue(" IHM a-t-elle Ã©tÃ© modifiÃ©e ?", components[2] instanceof JPanel);
-        assertTrue(" IHM a-t-elle Ã©tÃ© modifiÃ©e ?", components[3] instanceof JPanel);
+        assertTrue(" IHM a-t-elle été modifiée ?", components[0] instanceof JPanel);
+        assertTrue(" IHM a-t-elle été modifiée ?", components[1] instanceof JPanel);
+        assertTrue(" IHM a-t-elle été modifiée ?", components[2] instanceof JPanel);
+        assertTrue(" IHM a-t-elle été modifiée ?", components[3] instanceof JPanel);
 
         Component[] subComponents = ((JPanel)components[2]).getComponents();
-        assertTrue(" IHM a-t-elle Ã©tÃ© modifiÃ©e ?", subComponents[1] instanceof JButton);// union
-        assertTrue(" IHM a-t-elle Ã©tÃ© modifiÃ©e ?", subComponents[2] instanceof JButton);// inter
-        assertTrue(" IHM a-t-elle Ã©tÃ© modifiÃ©e ?", subComponents[3] instanceof JButton);// diff
-        assertTrue(" IHM a-t-elle Ã©tÃ© modifiÃ©e ?", subComponents[4] instanceof JButton);// diffSym
+        assertTrue(" IHM a-t-elle été modifiée ?", subComponents[1] instanceof JButton);// union
+        assertTrue(" IHM a-t-elle été modifiée ?", subComponents[2] instanceof JButton);// inter
+        assertTrue(" IHM a-t-elle été modifiée ?", subComponents[3] instanceof JButton);// diff
+        assertTrue(" IHM a-t-elle été modifiée ?", subComponents[4] instanceof JButton);// diffSym
 
         final String e1 = "2 3 4 5"; placerPourE1(e1);
         final String e2 = "4 5 6 7"; placerPourE2(e2);
@@ -84,19 +84,19 @@ public class IHMTestEnsembleTests extends junit.framework.TestCase{
     public void test_IHMTestEnsemble_diff() throws Exception{
         Container panel = f.getContentPane();
         Component[] components = panel.getComponents();
-        assertEquals(" IHM a-t-elle Ã©tÃ© modifiÃ©e ?", components.length, 4);
+        assertEquals(" IHM a-t-elle été modifiée ?", components.length, 4);
 
         // la bonne IHM
-        assertTrue(" IHM a-t-elle Ã©tÃ© modifiÃ©e ?", components[0] instanceof JPanel);
-        assertTrue(" IHM a-t-elle Ã©tÃ© modifiÃ©e ?", components[1] instanceof JPanel);
-        assertTrue(" IHM a-t-elle Ã©tÃ© modifiÃ©e ?", components[2] instanceof JPanel);
-        assertTrue(" IHM a-t-elle Ã©tÃ© modifiÃ©e ?", components[3] instanceof JPanel);
+        assertTrue(" IHM a-t-elle été modifiée ?", components[0] instanceof JPanel);
+        assertTrue(" IHM a-t-elle été modifiée ?", components[1] instanceof JPanel);
+        assertTrue(" IHM a-t-elle été modifiée ?", components[2] instanceof JPanel);
+        assertTrue(" IHM a-t-elle été modifiée ?", components[3] instanceof JPanel);
 
         Component[] subComponents = ((JPanel)components[2]).getComponents();
-        assertTrue(" IHM a-t-elle Ã©tÃ© modifiÃ©e ?", subComponents[1] instanceof JButton);// union
-        assertTrue(" IHM a-t-elle Ã©tÃ© modifiÃ©e ?", subComponents[2] instanceof JButton);// inter
-        assertTrue(" IHM a-t-elle Ã©tÃ© modifiÃ©e ?", subComponents[3] instanceof JButton);// diff
-        assertTrue(" IHM a-t-elle Ã©tÃ© modifiÃ©e ?", subComponents[4] instanceof JButton);// diffSym
+        assertTrue(" IHM a-t-elle été modifiée ?", subComponents[1] instanceof JButton);// union
+        assertTrue(" IHM a-t-elle été modifiée ?", subComponents[2] instanceof JButton);// inter
+        assertTrue(" IHM a-t-elle été modifiée ?", subComponents[3] instanceof JButton);// diff
+        assertTrue(" IHM a-t-elle été modifiée ?", subComponents[4] instanceof JButton);// diffSym
 
         final String e1 = "2 3 4 5"; placerPourE1(e1);
         final String e2 = "4 5 6 7"; placerPourE2(e2);
@@ -108,19 +108,19 @@ public class IHMTestEnsembleTests extends junit.framework.TestCase{
     public void test_IHMTestEnsemble_diffSym() throws Exception{
         Container panel = f.getContentPane();
         Component[] components = panel.getComponents();
-        assertEquals(" IHM a-t-elle Ã©tÃ© modifiÃ©e ?", components.length, 4);
+        assertEquals(" IHM a-t-elle été modifiée ?", components.length, 4);
 
         // la bonne IHM
-        assertTrue(" IHM a-t-elle Ã©tÃ© modifiÃ©e ?", components[0] instanceof JPanel);
-        assertTrue(" IHM a-t-elle Ã©tÃ© modifiÃ©e ?", components[1] instanceof JPanel);
-        assertTrue(" IHM a-t-elle Ã©tÃ© modifiÃ©e ?", components[2] instanceof JPanel);
-        assertTrue(" IHM a-t-elle Ã©tÃ© modifiÃ©e ?", components[3] instanceof JPanel);
+        assertTrue(" IHM a-t-elle été modifiée ?", components[0] instanceof JPanel);
+        assertTrue(" IHM a-t-elle été modifiée ?", components[1] instanceof JPanel);
+        assertTrue(" IHM a-t-elle été modifiée ?", components[2] instanceof JPanel);
+        assertTrue(" IHM a-t-elle été modifiée ?", components[3] instanceof JPanel);
 
         Component[] subComponents = ((JPanel)components[2]).getComponents();
-        assertTrue(" IHM a-t-elle Ã©tÃ© modifiÃ©e ?", subComponents[1] instanceof JButton);// union
-        assertTrue(" IHM a-t-elle Ã©tÃ© modifiÃ©e ?", subComponents[2] instanceof JButton);// inter
-        assertTrue(" IHM a-t-elle Ã©tÃ© modifiÃ©e ?", subComponents[3] instanceof JButton);// diff
-        assertTrue(" IHM a-t-elle Ã©tÃ© modifiÃ©e ?", subComponents[4] instanceof JButton);// diffSym
+        assertTrue(" IHM a-t-elle été modifiée ?", subComponents[1] instanceof JButton);// union
+        assertTrue(" IHM a-t-elle été modifiée ?", subComponents[2] instanceof JButton);// inter
+        assertTrue(" IHM a-t-elle été modifiée ?", subComponents[3] instanceof JButton);// diff
+        assertTrue(" IHM a-t-elle été modifiée ?", subComponents[4] instanceof JButton);// diffSym
 
         final String e1 = "2 3 4 5"; placerPourE1(e1);
         final String e2 = "4 5 6 7"; placerPourE2(e2);
@@ -136,8 +136,8 @@ public class IHMTestEnsembleTests extends junit.framework.TestCase{
         assertTrue(subComponents[1] instanceof JTextField);
         JTextField jt = (JTextField)subComponents[1];
         jt.setText(str);
-        // 		Point location = subComponents[1].getLocationOnScreen();
-        // 		mouseMoveAndClickClick(location.x,location.y);
+         		Point location = subComponents[1].getLocationOnScreen();
+         		mouseMoveAndClickClick(location.x,location.y);
         // 		typeLine(str, robot, false);
     }
 
@@ -148,9 +148,9 @@ public class IHMTestEnsembleTests extends junit.framework.TestCase{
 
         assertTrue(subComponents[1] instanceof JTextField);
         JTextField jt = (JTextField)subComponents[1];
-        jt.setText(str);		
-        // 		Point location = subComponents[1].getLocationOnScreen();
-        // 		mouseMoveAndClickClick(location.x,location.y);
+        jt.setText(str);
+        		Point location = subComponents[1].getLocationOnScreen();
+         		mouseMoveAndClickClick(location.x,location.y);
         // 		typeLine(str, robot, false);
     }
 
@@ -159,7 +159,7 @@ public class IHMTestEnsembleTests extends junit.framework.TestCase{
         Component[] components = panel.getComponents();
         Component[] subComponents = ((JPanel)components[2]).getComponents();
 
-        assertTrue(" IHM a-t-elle Ã©tÃ© modifiÃ©e ?", subComponents[1] instanceof JButton);// union
+        assertTrue(" IHM a-t-elle été modifiée ?", subComponents[1] instanceof JButton);// union
         // 		JButton union = ((JButton)subComponents[1]);
         // 		ActionListener[] listeners = union.getActionListeners();
         // 		assertTrue(listeners.length==1);
@@ -174,7 +174,7 @@ public class IHMTestEnsembleTests extends junit.framework.TestCase{
         Component[] components = panel.getComponents();
         Component[] subComponents = ((JPanel)components[2]).getComponents();
 
-        assertTrue(" IHM a-t-elle Ã©tÃ© modifiÃ©e ?", subComponents[2] instanceof JButton);// inter
+        assertTrue(" IHM a-t-elle été modifiée ?", subComponents[2] instanceof JButton);// inter
         // 		JButton inter = ((JButton)subComponents[2]);
         // 		ActionListener[] listeners = inter.getActionListeners();
         // 		assertTrue(listeners.length==1);
@@ -189,7 +189,7 @@ public class IHMTestEnsembleTests extends junit.framework.TestCase{
         Component[] components = panel.getComponents();
         Component[] subComponents = ((JPanel)components[2]).getComponents();
 
-        assertTrue(" IHM a-t-elle Ã©tÃ© modifiÃ©e ?", subComponents[3] instanceof JButton);// diff
+        assertTrue(" IHM a-t-elle été modifiée ?", subComponents[3] instanceof JButton);// diff
         // 		JButton diff = ((JButton)subComponents[3]);
         // 		ActionListener[] listeners = diff.getActionListeners();
         // 		assertTrue(listeners.length==1);
@@ -204,7 +204,7 @@ public class IHMTestEnsembleTests extends junit.framework.TestCase{
         Component[] components = panel.getComponents();
         Component[] subComponents = ((JPanel)components[2]).getComponents();
 
-        assertTrue(" IHM a-t-elle Ã©tÃ© modifiÃ©e ?", subComponents[4] instanceof JButton);// diffSym
+        assertTrue(" IHM a-t-elle été modifiée ?", subComponents[4] instanceof JButton);// diffSym
         // 		JButton diffSym = ((JButton)subComponents[4]);
         // 		ActionListener[] listeners = diffSym.getActionListeners();
         // 		assertTrue(listeners.length==1);
@@ -218,7 +218,7 @@ public class IHMTestEnsembleTests extends junit.framework.TestCase{
         Component[] components = panel.getComponents();
         Component[] subComponents = ((JPanel)components[3]).getComponents();
         JTextField res = (JTextField) subComponents[1];
-        TreeSet resultat = getSet(res.getText());     
+        TreeSet resultat = getSet(res.getText());
         TreeSet reference = getSet(resultatAttendu);
         assertTrue("["+ e1 + "] " + op + " [" + e2 + "] # [" + resultatAttendu + "] ??, obtenu:(" + resultat + ")", reference.toString().equals(resultat.toString()));
     }
@@ -239,54 +239,55 @@ public class IHMTestEnsembleTests extends junit.framework.TestCase{
 
             if(array[i]>='a'&&array[i]<='z'){
                 robot.keyPress((int)array[i]-(int)'a'+65);
-                robot.delay(60);
+                robot.delay(220);
                 robot.keyRelease((int)array[i]-(int)'a'+65);
             }else if(array[i]==' '){
                 robot.keyPress(KeyEvent.VK_SPACE);
-                robot.delay(60);
+                robot.delay(220);
                 robot.keyRelease(KeyEvent.VK_SPACE);
             }else if(array[i]>='A'&&array[i]<='Z'){
-                robot.keyPress(KeyEvent.VK_SHIFT);
-                robot.delay(60);
+            //    robot.keyPress(KeyEvent.VK_SHIFT);
+                robot.delay(220);
                 robot.keyPress((int)array[i]-(int)'A'+65);
-                robot.delay(60);
+                robot.delay(220);
                 robot.keyRelease((int)array[i]-(int)'A'+65);
-                robot.delay(60);
-                robot.keyRelease(KeyEvent.VK_SHIFT);
+                robot.delay(220);
+            //    robot.keyReease(KeyEvent.VK_SHIFT);
             }else if(array[i]>='0'&&array[i]<='9'){
-                robot.keyPress(KeyEvent.VK_SHIFT);
-                robot.delay(60);
+            //    robot.keyPress(KeyEvent.VK_SHIFT);
+                robot.delay(220);
                 robot.keyPress(KeyEvent.VK_0+(int)(array[i]-'0'));
-                robot.delay(60);
+                robot.delay(220);
                 robot.keyRelease(KeyEvent.VK_0+(int)(array[i]-'0'));
-                robot.delay(60);            
-                robot.keyRelease(KeyEvent.VK_SHIFT);
+                robot.delay(220);
+            //    robot.keyRelease(KeyEvent.VK_SHIFT);
             }
-            robot.delay(60);
+            robot.delay(220);
         }
     }
 
     public void mouseMoveAndClick(int x, int y){
         robot.mouseMove( x,y);
-        robot.delay(60);  
+        robot.delay(40);
         robot.mousePress(InputEvent.BUTTON1_MASK);
-        robot.delay(60);
+        robot.delay(40);
         robot.mouseRelease(InputEvent.BUTTON1_MASK);
-        robot.delay(60);
+        robot.delay(40);
     }//end mouseMoveAndClick
 
-    public void mouseMoveAndClickClick(int x, int y){
+
+   public void mouseMoveAndClickClick(int x, int y){
         robot.mouseMove( x,y);
-        robot.delay(60);
+        robot.delay(40);
         robot.mousePress(InputEvent.BUTTON1_MASK);
-        robot.delay(60);
+        robot.delay(40);
         robot.mouseRelease(InputEvent.BUTTON1_MASK);
-        robot.delay(60);
+        robot.delay(40);
         robot.mousePress(InputEvent.BUTTON1_MASK);
-        robot.delay(60);
+        robot.delay(40);
         robot.mouseRelease(InputEvent.BUTTON1_MASK);
-        robot.delay(60);
+        robot.delay(40);
     }//end mouseMoveAndClickClick
 
-    
+
 }

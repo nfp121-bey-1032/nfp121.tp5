@@ -2,38 +2,45 @@ package question2;
 
 import java.util.List;
 import java.util.Map;
-// à  compléter
+import java.util.*;
 import java.util.StringTokenizer;
 
 public class Chapitre2CoreJava2 {
 
     /**
-     * Obtention d'une liste de mots a  partir de la constante CHAPITRE2.
-     * 
+     * Obtention d'une liste de mots a  partir de la constante CHAPITRE2.
+     *
      **/
     public static List<String> listeDesMots() {
-        List<String> liste = null; // à  compléter
+        List<String> liste = new LinkedList<String>();
 
         StringTokenizer st = new StringTokenizer(Chapitre2CoreJava2.CHAPITRE2,
                 "[](){};, :.\n\"");
-        // à  compléter
-
+        while (st.hasMoreTokens()) {
+            liste.add(st.nextToken());
+        }
         return liste;
     }
 
     /**
-     * Obtention d'une liste de couples <String,Integer>. 
-     * A chaque mot présent dans la liste, est associé son nombre d'occurrence.
-     * 
+     * Obtention d'une liste de couples <String,Integer>.
+     * A chaque mot pr�sent dans la liste, est associ� son nombre d'occurrence.
+     *
      * @param liste la liste des mots
      */
     public static Map<String, Integer> occurrencesDesMots(List<String> liste) {
-        Map<String, Integer> table = null; // à  compléter
-        // à  compléter
-        // à  compléter
+       Map<String, Integer> table = new HashMap<String, Integer>();
+        ListIterator<String> it = liste.listIterator();
+        while(it.hasNext()){
+            String s = it.next();
+            int freq = Collections.frequency(liste, s);
+            if(!table.containsKey(s)){
+                table.put(s, freq);
+            }
+
+        }
         return table;
     }
-
     public static final String CHAPITRE2 =
 
         "Core Java 2, Volume II"

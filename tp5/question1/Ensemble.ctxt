@@ -1,8 +1,19 @@
 #BlueJ class context
-comment0.params=
-comment0.target=int\ size()
+comment0.target=Ensemble
 comment1.params=
-comment1.target=java.util.Iterator\ iterator()
-comment2.params=t
-comment2.target=boolean\ add(java.lang.Object)
-numComments=3
+comment1.target=int\ size()
+comment2.params=
+comment2.target=java.util.Iterator\ iterator()
+comment3.params=
+comment3.target=java.util.Vector\ getVector()
+comment4.params=t
+comment4.target=boolean\ add(java.lang.Object)
+comment5.params=e
+comment5.target=Ensemble\ union(Ensemble)
+comment6.params=e
+comment6.target=Ensemble\ inter(Ensemble)
+comment7.params=e
+comment7.target=Ensemble\ diff(Ensemble)
+comment8.params=e
+comment8.target=Ensemble\ diffSym(Ensemble)
+numComments=9

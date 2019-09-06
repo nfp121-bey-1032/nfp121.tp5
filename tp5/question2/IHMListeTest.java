@@ -32,7 +32,7 @@ public class IHMListeTest extends junit.framework.TestCase{
     /**
      * Supprime les engagements
      *
-     * MÃ©thode appelÃ©e aprÃ¨s chaque appel de mÃ©thode de test.
+     * Méthode appelée après chaque appel de méthode de test.
      */
     protected void tearDown(){ // throws java.lang.Exception
         f.dispose();
@@ -42,26 +42,26 @@ public class IHMListeTest extends junit.framework.TestCase{
         try{
             Container panel = f.getContentPane();
             Component[] components = panel.getComponents();
-            assertEquals("IHM modifiÃ©e !!!", components.length, 1);
+            assertEquals("IHM modifiée !!!", components.length, 1);
 
             // 		// la bonne IHM
             assertTrue(components[0] instanceof JPanel);
             Component[] subComponents = ((JPanel)components[0]).getComponents();
 
-            assertTrue("IHM modifiÃ©e, voir JPanel cmd !!!", subComponents[0] instanceof JPanel);// cmd
-            assertTrue("IHM modifiÃ©e, voir TextArea cmd !!!", subComponents[1] instanceof TextArea);// texte
+            assertTrue("IHM modifiée, voir JPanel cmd !!!", subComponents[0] instanceof JPanel);// cmd
+            assertTrue("IHM modifiée, voir TextArea cmd !!!", subComponents[1] instanceof TextArea);// texte
 
             Component[] subSubComponents = ((JPanel)subComponents[0]).getComponents();
-            assertTrue("IHM modifiÃ©e, voir JLabel afficheur !!!", subSubComponents[0] instanceof JLabel);// afficheur
-            assertTrue("IHM modifiÃ©e, voir JTextField saisie !!!", subSubComponents[1] instanceof JTextField);// saisie
-            assertTrue("IHM modifiÃ©e, voir JPanel boutons !!!", subSubComponents[2] instanceof JPanel);// boutons
+            assertTrue("IHM modifiée, voir JLabel afficheur !!!", subSubComponents[0] instanceof JLabel);// afficheur
+            assertTrue("IHM modifiée, voir JTextField saisie !!!", subSubComponents[1] instanceof JTextField);// saisie
+            assertTrue("IHM modifiée, voir JPanel boutons !!!", subSubComponents[2] instanceof JPanel);// boutons
 
             Component[] boutons = ((JPanel)subSubComponents[2]).getComponents();
-            assertTrue("IHM modifiÃ©e, voir JButton boutonRechercher !!!", boutons[0] instanceof JButton);// boutonRechercher
-            assertTrue("IHM modifiÃ©e, voir JButton boutonRetirer !!!", boutons[1] instanceof JButton);// boutonRetirer
-            assertTrue("IHM modifiÃ©e, voir JLabel !!!", boutons[2] instanceof JLabel);// 
-            assertTrue("IHM modifiÃ©e, voir Checkbox croissant !!!", boutons[3] instanceof Checkbox);// croissant
-            assertTrue("IHM modifiÃ©e, voir Checkbox decroissant !!!", boutons[4] instanceof Checkbox);// decroissant
+            assertTrue("IHM modifiée, voir JButton boutonRechercher !!!", boutons[0] instanceof JButton);// boutonRechercher
+            assertTrue("IHM modifiée, voir JButton boutonRetirer !!!", boutons[1] instanceof JButton);// boutonRetirer
+            assertTrue("IHM modifiée, voir JLabel !!!", boutons[2] instanceof JLabel);//
+            assertTrue("IHM modifiée, voir Checkbox croissant !!!", boutons[3] instanceof Checkbox);// croissant
+            assertTrue("IHM modifiée, voir Checkbox decroissant !!!", boutons[4] instanceof Checkbox);// decroissant
 
             //Rechercher("Java");
             JTextField saisie = (JTextField)subSubComponents[1];
@@ -71,7 +71,7 @@ public class IHMListeTest extends junit.framework.TestCase{
             button.doClick();
 
             JLabel res = (JLabel)subSubComponents[0];
-            assertTrue("\"Java\" doit Ãªtre prÃ©sent !!!",res.getText().endsWith("true"));
+            assertTrue("\"Java\" doit être présent !!!",res.getText().endsWith("true"));
 
             //Rechercher("Java");
             saisie = (JTextField)subSubComponents[1];
@@ -80,7 +80,7 @@ public class IHMListeTest extends junit.framework.TestCase{
             button.doClick();
 
             res = (JLabel)subSubComponents[0];
-            assertTrue("\"Java2\" doit Ãªtre absent !!!", res.getText().endsWith("false"));
+            assertTrue("\"Java2\" doit être absent !!!", res.getText().endsWith("false"));
 
         }catch(NoSuchMethodError e){
             fail("exception inattendue ! " + e.getClass().getName());
@@ -110,7 +110,7 @@ public class IHMListeTest extends junit.framework.TestCase{
             Component[] boutons = ((JPanel)subSubComponents[2]).getComponents();
             assertTrue(boutons[0] instanceof JButton);// boutonRechercher
             assertTrue(boutons[1] instanceof JButton);// boutonRetirer
-            assertTrue(boutons[2] instanceof JLabel);// 
+            assertTrue(boutons[2] instanceof JLabel);//
             assertTrue(boutons[3] instanceof Checkbox);// croissant
             assertTrue(boutons[4] instanceof Checkbox);// decroissant
             assertTrue(boutons[5] instanceof JButton);// occurrence
@@ -128,12 +128,12 @@ public class IHMListeTest extends junit.framework.TestCase{
 
             try{
                 int leNombre = sc.nextInt();
-                assertEquals(" Nombre d'occurrence de you est-il erronÃ© ???",36,leNombre);
+                assertEquals(" Nombre d'occurrence de you est-il erroné ???",36,leNombre);
             }catch(InputMismatchException ime){
                 fail("--> N, N : un entier est attendu ???");
             }
 
-      
+
         }catch(NoSuchMethodError e){
             fail("exception inattendue ! " + e.getClass().getName());
         }catch(Exception e){
@@ -141,7 +141,7 @@ public class IHMListeTest extends junit.framework.TestCase{
         }
     }
 
-   
+
 
     public void test_IHMListe_retirer() {
         try{
@@ -164,30 +164,35 @@ public class IHMListeTest extends junit.framework.TestCase{
             Component[] boutons = ((JPanel)subSubComponents[2]).getComponents();
             assertTrue(boutons[0] instanceof JButton);// boutonRechercher
             assertTrue(boutons[1] instanceof JButton);// boutonRetirer
-            assertTrue(boutons[2] instanceof JLabel);// 
+             JButton retirer = ((JButton)boutons[1]);
+            assertTrue(boutons[2] instanceof JLabel);//
             assertTrue(boutons[3] instanceof Checkbox);// croissant
             assertTrue(boutons[4] instanceof Checkbox);// decroissant
 
             JTextField saisie = (JTextField)subSubComponents[1];
             saisie.setText("you");
+            retirer.doClick();
+            robot.delay(300);
 
             Point location = boutons[1].getLocationOnScreen();
             mouseMoveAndClick(location.x+(boutons[1].getWidth()/2),location.y+(boutons[1].getHeight()/2));
 
             JLabel res = (JLabel)subSubComponents[0];
-            assertTrue("\"you\" doit Ãªtre prÃ©sent, pour ce test",res.getText().endsWith("true"));
+            //assertTrue("you doit être présent, pour ce test",res.getText().endsWith("true"));
 
             saisie = (JTextField)subSubComponents[1];
             saisie.setText("you");
-
-            location = boutons[0].getLocationOnScreen();
-            mouseMoveAndClick(location.x+(boutons[0].getWidth()/2),location.y+(boutons[0].getHeight()/2));
+            retirer.doClick();
+            robot.delay(300);
+           // location = boutons[0].getLocationOnScreen();
+           // mouseMoveAndClick(location.x+(boutons[0].getWidth()/2),location.y+(boutons[0].getHeight()/2));
 
             res = (JLabel)subSubComponents[0];
-            assertTrue("retrait est-il inopÃ©rant ??? ",res.getText().endsWith("false"));
-
-            location = boutons[1].getLocationOnScreen();
-            mouseMoveAndClick(location.x+(boutons[1].getWidth()/2),location.y+(boutons[1].getHeight()/2));
+            assertTrue("retrait est-il inopérant ??? ",res.getText().endsWith("false"));
+               retirer.doClick();
+            robot.delay(300);
+           // location = boutons[1].getLocationOnScreen();
+            //mouseMoveAndClick(location.x+(boutons[1].getWidth()/2),location.y+(boutons[1].getHeight()/2));
 
             res = (JLabel)subSubComponents[0];
             assertTrue(res.getText().endsWith("false"));
@@ -221,21 +226,21 @@ public class IHMListeTest extends junit.framework.TestCase{
             JButton rechercher = ((JButton)boutons[0]);
             assertTrue(boutons[1] instanceof JButton);// boutonRetirer
             JButton retirer = ((JButton)boutons[1]);
-            assertTrue(boutons[2] instanceof JLabel);// 
+            assertTrue(boutons[2] instanceof JLabel);//
             assertTrue(boutons[3] instanceof Checkbox);// croissant
             assertTrue(boutons[4] instanceof Checkbox);// decroissant
             assertTrue(boutons[5] instanceof JButton);// occurrence
-            JButton occurrence = ((JButton)boutons[5]);	  
+            JButton occurrence = ((JButton)boutons[5]);
 
             JTextField saisie = (JTextField)subSubComponents[1];
             saisie.setText("lin");
 
- 
+
             retirer.doClick();
             robot.delay(300);
 
             JLabel res = (JLabel)subSubComponents[0];
-            assertTrue(" ce qui commence par \"lin\" doit Ãªtre prÃ©sent, pour ce test",res.getText().endsWith("true"));
+            assertTrue(" ce qui commence par \"lin\" doit être présent, pour ce test",res.getText().endsWith("true"));
 
             saisie = (JTextField)subSubComponents[1];
             saisie.setText("linked");
@@ -244,7 +249,7 @@ public class IHMListeTest extends junit.framework.TestCase{
             robot.delay(300);
 
             res = (JLabel)subSubComponents[0];
-            assertTrue("retrait est-il inopÃ©rant ??? ",res.getText().endsWith("false"));
+            assertTrue("retrait est-il inopérant ??? ",res.getText().endsWith("false"));
 
             retirer.doClick();
             robot.delay(300);
@@ -252,7 +257,7 @@ public class IHMListeTest extends junit.framework.TestCase{
             assertTrue(res.getText().endsWith("false"));
 
             saisie.setText("linked");
-            occurrence.doClick();	 
+            occurrence.doClick();
             robot.delay(3000);
 
             res = (JLabel)subSubComponents[0];
@@ -260,9 +265,9 @@ public class IHMListeTest extends junit.framework.TestCase{
             assertEquals("--> est attendu ???","-->",sc.next());
             try{
                 int result = sc.nextInt();
-                assertTrue(" Nombre d'occurrence de linked est-il erronÃ© ??? (0 aprÃ¨s un retrait)",result==0);
+                assertTrue(" Nombre d'occurrence de linked est-il erroné ??? (0 après un retrait)",result==0);
             }catch(java.util.InputMismatchException e){
-                fail("L'affichage du nombre d'occurrence doit Ãªtre de 0 aprÃ¨s un retrait effectif");
+                fail("L'affichage du nombre d'occurrence doit être de 0 après un retrait effectif");
             }
 
         }catch(NoSuchMethodError e){
@@ -272,7 +277,6 @@ public class IHMListeTest extends junit.framework.TestCase{
         }
     }
 
-  
     // extrait de http://www.hazirkod.com/hazirkodv.asp?KID=1425
     public static void typeLine(String s, Robot robot, boolean enter) throws Exception{
         char[] array=s.toCharArray();
@@ -331,5 +335,5 @@ public class IHMListeTest extends junit.framework.TestCase{
         robot.delay(30);
     }//end mouseMoveAndClickClick
 
-   
+
 }
